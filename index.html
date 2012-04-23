@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="setZeroTimeout dot js : setZeroTimeout with functionality closer to setTimeout, without breaking the browser's native error handler." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>setZeroTimeout dot js</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/shahyar/setZeroTimeout-js">Fork Me on GitHub</a>
+
+          <h1 id="project_title">setZeroTimeout dot js</h1>
+          <h2 id="project_tagline">setZeroTimeout with functionality closer to setTimeout, without breaking the browser's native error handler.</h2>
+
+          <section id="downloads">
+            <a class="zip_download_link" href="https://github.com/shahyar/setZeroTimeout-js/zipball/master">Download this project as a .zip file</a>
+            <a class="tar_download_link" href="https://github.com/shahyar/setZeroTimeout-js/tarball/master">Download this project as a tar.gz file</a>
+          </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>setZeroTimeout is a simple utility function allowing you to use a sub-10ms (near-instantaneous, in most cases) asynchronous setTimeout analogue. This is performed using the browser's messaging system. In simpler terms: 0ms setTimeout.</p>
+
+<p>Its usage is simple: <code>setZeroTimeout(Function, 0);</code></p>
+
+<p>It uses setTimeout syntax, because in unsupporting browsers (FF&lt;3, IE&lt;8, SF&lt;5, O&lt;10), <code>setZeroTimeout</code> is actually a reference to <code>setTimeout</code>. Therefore, the second parameter of timeout is <em>mandatory</em>. On most old browsers, the actual minimum for setTimeout is ~10ms. setZeroTimeout usually runs much under 1ms.</p>
+
+<p>While other setZeroTimeout implementations exist, this particular one continues to throw valid <code>Error</code>s inside a closure, without breaking the timeout queue nor severely hindering JavaScript debuggability.</p>
+
+<p>Licensed freely under CC 3.0: <a href="http://creativecommons.org/licenses/by/3.0/">http://creativecommons.org/licenses/by/3.0/</a></p>
+
+<p>--SG</p>
+
+<h3>Browser Support</h3>
+
+<table>
+<tr>
+<th>Browser</th>
+        <th>Support</th>
+        <th>Notes</th>
+    </tr>
+<tr>
+<th>Chrome 4</th>
+        <td>?</td>
+        <td>Untested</td>
+    </tr>
+<tr>
+<th>Chrome 5-20+</th>
+        <td>✓</td>
+    </tr>
+<tr>
+<th>IE 6</th>
+        <td>–</td>
+        <td>Uses setTimeout</td>
+    </tr>
+<tr>
+<th>IE 7</th>
+        <td>–</td>
+        <td>Uses setTimeout</td>
+    </tr>
+<tr>
+<th>IE 8, 9, 10+</th>
+        <td>✓</td>
+    </tr>
+<tr>
+<th>Firefox 2</th>
+        <td>–</td>
+        <td>Uses setTimeout</td>
+    </tr>
+<tr>
+<th>Firefox 3-5+</th>
+        <td>✓</td>
+    </tr>
+<tr>
+<th>Safari 4</th>
+        <td>–</td>
+        <td>Uses setTimeout</td>
+    </tr>
+<tr>
+<th>Safari 5+</th>
+        <td>✓</td>
+    </tr>
+<tr>
+<th>Opera 8</th>
+        <td>?</td>
+        <td>Untested</td>
+    </tr>
+<tr>
+<th>Opera 9</th>
+        <td>–</td>
+        <td>Uses setTimeout</td>
+    </tr>
+<tr>
+<th>Opera 10+</th>
+        <td>✓</td>
+    </tr>
+</table>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">setZeroTimeout dot js maintained by <a href="https://github.com/shahyar">shahyar</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
