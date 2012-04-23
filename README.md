@@ -1,4 +1,4 @@
-setZeroTimeout is a simple utility function allowing you to use a sub-10ms (near-instantaneous, in most cases) asynchronous setTimeout analogue. This is performed using the browser's messaging system. In simpler terms: 0ms setTimeout.
+[setZeroTimeout](http://shahyar.github.com/setZeroTimeout-js/) is a simple utility function allowing you to use a sub-10ms (near-instantaneous, in most cases) asynchronous setTimeout analogue. This is performed using the browser's messaging system. In simpler terms: 0ms setTimeout.
 
 Its usage is simple: `setZeroTimeout(Function, 0);`
 
